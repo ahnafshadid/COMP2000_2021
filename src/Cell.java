@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import java.awt.*;
 
 class Cell{
@@ -32,3 +33,22 @@ class Cell{
         }
     }
 }
+=======
+import java.awt.Graphics;
+    
+public class Cell {
+    int x;
+    int y;
+    static int size =35;
+    
+    public Cell (int posx, int posy){
+        this.x = posx;
+        this.y = posy;
+    }
+
+    public void drawCell(Graphics g){
+        g.drawRect(x, y, size, size);
+    }
+
+}
+>>>>>>> Stashed changes

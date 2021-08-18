@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+<<<<<<< Updated upstream
 
 class Main extends JFrame {
     
@@ -37,4 +38,32 @@ class Main extends JFrame {
             this.repaint();
         }
     }
+=======
+ 
+public class Main extends JFrame implements Runnable{    
+    public static void main(String[] args) throws Exception {
+       Main window = new Main();
+    }
+    public class Canvas extends JPanel {
+        public Canvas(){
+            setPreferredSize(new Dimension(720,720));
+        }
+
+        Grid grid = new Grid();
+
+        @Override
+        public void paint (Graphics g){
+            grid.drawGrid(g);
+        }
+    }
+
+
+    public Main(){
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Canvas canvas = new Canvas();
+        this.setContentPane(canvas);
+        this.pack(); 
+        this.setVisible(true);
+   }
+>>>>>>> Stashed changes
 }
